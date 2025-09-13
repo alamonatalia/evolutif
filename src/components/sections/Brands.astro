@@ -2,6 +2,17 @@
 import Container from "../elements/Container.astro";
 import Section from "../elements/Section.astro";
 
+const img = {
+  planet: `${Astro.site}/images/planet.png`,
+  brand1: `${Astro.site}/images/brand-1.png`,
+  brand2: `${Astro.site}/images/brand-2.png`,
+  brand3: `${Astro.site}/images/brand-3.png`,
+  brand4: `${Astro.site}/images/brand-4.png`,     
+  brand5: `${Astro.site}/images/brand-5.png`,
+  brand6: `${Astro.site}/images/brand-6.png`,
+  brand7: `${Astro.site}/images/brand-7.png`,
+  arrow: `${Astro.site}/images/icon-arrow.svg`,
+};
 ---
 
 <Section>
@@ -10,7 +21,7 @@ import Section from "../elements/Section.astro";
         <div class="bg-red-200 relative ml-auto z-0">
             <div class="absolute -top-32 mt-[1px] left-0 w-full">
                 <img 
-                    src="/images/planet.png" 
+                    src={img.planet} 
                     alt=""
                     class=" h-32 w-auto ml-auto mr-auto">
             </div>
@@ -23,33 +34,33 @@ import Section from "../elements/Section.astro";
   
                 <!-- Slides -->
                 <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
-                    <img src="/images/brand-1.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                    <img src={img.brand1} class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
                 </div>
                 <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
-                    <img src="/images/brand-2.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                    <img src={img.brand2} class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
                 </div>
                 <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
-                    <img src="/images/brand-3.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                    <img src={img.brand3} class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
                 </div>
                 <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
-                    <img src="/images/brand-4.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                    <img src={img.brand4} class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
                 </div>
                 <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
-                    <img src="/images/brand-5.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                    <img src={img.brand5} class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
                 </div>
                 <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
-                    <img src="/images/brand-6.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                    <img src={img.brand6} class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
                 </div>
                 <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
-                    <img src="/images/brand-7.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                    <img src={img.brand7} class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
                 </div>
                 
                 <!-- Controles -->
-                <button id="prev" class="absolute -left-4 top-1/2 -translate-y-1/2">
-                    <img src="/images/icon-arrow.svg" alt="" class="w-7 h-7">
+                <button id="prev" class="absolute -left-4 top-1/2 -translate-y-1/2 cursor-pointer">
+                    <img src={img.arrow} alt="" class="w-7 h-7">
                 </button>
-                <button id="next" class="absolute -right-4 top-1/2 -translate-y-1/2">
-                    <img src="/images/icon-arrow.svg" alt="" class="w-7 h-7 rotate-180">
+                <button id="next" class="absolute -right-4 top-1/2 -translate-y-1/2 cursor-pointer">
+                    <img src={img.arrow} alt="" class="w-7 h-7 rotate-180">
                 </button>
             </div>
 

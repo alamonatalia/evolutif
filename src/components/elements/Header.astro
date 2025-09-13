@@ -2,6 +2,10 @@
 import Container from "./Container.astro";
 import Nav from "./Nav.astro";
 
+const img = {
+  logo: `${Astro.site}/images/evolutif.svg`,
+};
+
 ---
 
 <header class="absolute top-0 left-0 w-full py-6">
@@ -10,7 +14,7 @@ import Nav from "./Nav.astro";
         <div class="flex items-center justify-between py-4">
             <a href="#home-link">
                 <img 
-                    src="/images/evolutif.svg"   
+                    src={img.logo}    
                     alt="Evolutif Logo" 
                     class="w-full h-auto max-w-2xs"
                 />

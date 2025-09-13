@@ -1,11 +1,17 @@
 ---
 import Container from "../elements/Container.astro"
 import Section from "../elements/Section.astro"
+
+const img = {
+  bg: `${Astro.site}/images/bg-rocket-planet.png`,
+};
+
+
 ---
 
 <Section class="min-h-screen bg-center bg-cover bg-[url('/images/bg-hero.png')]">
     <Container class="relative">
-        <div class="pt-40">
+        <div class="pt-40 z-10 relative">
             <h1 class="text-4xl font-light font-body tracking-widest mt-6 mb-18">
                 Welcome to EvolutiF !
             </h1>
@@ -21,7 +27,7 @@ import Section from "../elements/Section.astro"
             </button>
         </div>
 
-        <img src="/images/bg-rocket-planet.png" alt="" class="absolute top-1/6 right-0 w-full h-auto" >
+        <img src={img.bg} alt="" class="absolute top-1/6 right-0 w-full h-auto z-0" >
 
     </Container>
 </Section>

@@ -2,6 +2,26 @@
 import Container from "../elements/Container.astro";
 import Section from "../elements/Section.astro";
 
+const icon = {
+    rocket: `${Astro.site}/images/icon-rocket.svg`,
+    rocketItem1: `${Astro.site}/images/icon-rocket-item-1.svg`,
+    rocketItem2: `${Astro.site}/images/icon-rocket-item-2.svg`,
+    rocketItem3: `${Astro.site}/images/icon-rocket-item-3.svg`,
+    rocketItem4: `${Astro.site}/images/icon-rocket-item-4.svg`,
+    
+    bgInvestors: `${Astro.site}/images/bg-service.png`,
+    investors: `${Astro.site}/images/icon-investors.svg`,
+    investorsItem1: `${Astro.site}/images/icon-investors-item-1.svg`,
+    investorsItem2: `${Astro.site}/images/icon-investors-item-2.svg`,
+    investorsItem3: `${Astro.site}/images/icon-investors-item-3.svg`,
+
+    light: `${Astro.site}/images/icon-light.svg`,
+    lightItem1: `${Astro.site}/images/icon-light-item-1.svg`,
+    lightItem2: `${Astro.site}/images/icon-light-item-2.svg`,
+    lightItem3: `${Astro.site}/images/icon-light-item-3.svg`,
+
+
+};
 ---
 
 <Section class="mb-10">
@@ -11,7 +31,7 @@ import Section from "../elements/Section.astro";
         <div class="mb-32">
             <div class="flex items-start gap-2 mb-6">
                 <img 
-                    src="/images/icon-rocket.svg" 
+                    src={icon.rocket} 
                     alt=""
                     class="h-16 w-auto">
                 <div>
@@ -26,7 +46,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-rocket-item-1.svg" 
+                    src={icon.rocketItem1} 
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -38,7 +58,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-rocket-item-2.svg" 
+                    src={icon.rocketItem2} 
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -50,7 +70,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-rocket-item-3.svg" 
+                    src={icon.rocketItem3}
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -62,7 +82,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-rocket-item-4.svg" 
+                    src={icon.rocketItem4}
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -77,13 +97,13 @@ import Section from "../elements/Section.astro";
 </Section>
 
 <Section class="mb-32 relative">
-    <img src="/images/bg-service.png" alt="" class="absolute -top-1/3 left-0 z-0 h-[800px] w-auto">
+    <img src={icon.bgInvestors} alt="" class="absolute -top-1/3 left-0 z-0 h-[800px] w-auto">
     <Container class="z-10 relative">
         <!-- Service 2 -->
         <div class="ml-auto mb-32 w-full max-w-[770px] z-10">
             <div class="flex items-start gap-2 mb-6">
                 <img 
-                    src="/images/icon-investors.svg" 
+                    src={icon.investors}
                     alt=""
                     class="h-16 w-auto">
                 <div>
@@ -98,7 +118,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[680px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-investors-item-1.svg" 
+                    src={icon.investorsItem1}
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -110,7 +130,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[680px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-investors-item-2.svg" 
+                    src={icon.investorsItem2}
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -122,7 +142,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[680px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-investors-item-3.svg" 
+                    src={icon.investorsItem3}
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -144,7 +164,7 @@ import Section from "../elements/Section.astro";
         <div>
             <div class="flex items-start gap-2 mb-6">
                 <img 
-                    src="/images/icon-light.svg" 
+                    src={icon.light}
                     alt=""
                     class="h-16 w-auto">
                 <div>
@@ -159,7 +179,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-light-item-1.svg" 
+                    src={icon.lightItem1}
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -171,7 +191,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-light-item-2.svg" 
+                    src={icon.lightItem2}
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">
@@ -183,7 +203,7 @@ import Section from "../elements/Section.astro";
             </div>
             <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
                 <img 
-                    src="/images/icon-light-item-3.svg" 
+                    src={icon.lightItem3}
                     alt=""
                     class="h-14 w-auto">
                 <p class="text-xl">

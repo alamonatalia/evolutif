@@ -2,6 +2,13 @@
 import Container from "../elements/Container.astro";
 import Section from "../elements/Section.astro";
 
+const img = {
+    logo: `${Astro.site}/images/icon-evolutif-way.svg`,
+    step1: `${Astro.site}/images/steps-1.png`,
+    step2: `${Astro.site}/images/steps-2.png`,
+    step3: `${Astro.site}/images/steps-3.png`,
+    step4: `${Astro.site}/images/steps-4.png`,
+};
 ---
 
 <Section class="mb-10">
@@ -9,7 +16,7 @@ import Section from "../elements/Section.astro";
     
         <div class="flex items-center justify-center gap-6 mb-32">
             <img 
-                src="/images/icon-evolutif-way.svg" 
+                src={img.logo} 
                 alt=""
                 class="h-20 w-auto">
             <h4 class="tracking-[6px] text-3xl font-light">
@@ -22,7 +29,7 @@ import Section from "../elements/Section.astro";
             <div class="flex relative max-w-[300px]">
                 <div class="absolute top-0 left-0 z-0">
                     <img 
-                        src="/images/steps-1.png" 
+                        src={img.step1}  
                         alt=""
                         class="w-40 h-auto">
                 </div>
@@ -39,7 +46,7 @@ import Section from "../elements/Section.astro";
             <div class="flex relative max-w-[300px]">
                 <div class="absolute top-0 left-0 z-0">
                     <img 
-                        src="/images/steps-2.png" 
+                        src={img.step2}
                         alt=""
                         class="w-40 h-auto">
                 </div>
@@ -56,7 +63,7 @@ import Section from "../elements/Section.astro";
             <div class="flex relative max-w-[300px]">
                 <div class="absolute top-0 left-0 z-0">
                     <img 
-                        src="/images/steps-3.png" 
+                        src={img.step3}
                         alt=""
                         class="w-40 h-auto">
                 </div>
@@ -73,7 +80,7 @@ import Section from "../elements/Section.astro";
             <div class="flex relative max-w-[300px]">
                 <div class="absolute top-0 left-0 z-0"> 
                     <img 
-                        src="/images/steps-4.png" 
+                        src={img.step4}
                         alt=""
                         class="w-40 h-auto">
                 </div>

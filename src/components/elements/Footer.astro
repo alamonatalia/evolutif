@@ -2,6 +2,16 @@
 import Container from "./Container.astro";
 import Section from "./Section.astro";
 
+const img = {
+    logo: `${Astro.site}/images/evolutif.svg`,
+    arg: `${Astro.site}/images/flag-argentina.svg`,
+    br: `${Astro.site}/images/flag-brasil.svg`,
+    inst: `${Astro.site}/images/icon-instagram.svg`,
+    link: `${Astro.site}/images/icon-linkedin.svg`,
+    what: `${Astro.site}/images/icon-whatsapp.svg`,
+    enve: `${Astro.site}/images/icon-envelope.svg`,
+    point: `${Astro.site}/images/icon-point.svg`,
+};
 ---
 
 <footer class="bg-brand-secondary">
@@ -9,13 +19,13 @@ import Section from "./Section.astro";
         <Container>
             <div class="flex">
                 <div class="w-full pt-6">
-                    <img src="/images/evolutif.svg" alt="" class="h-auto w-56">
+                    <img src={img.logo} alt="" class="h-auto w-56">
                     <div class="flex items-center gap-2 mt-4">
                         <p class="font-display text-sm">
                             All rights reserved 2025
                         </p>
-                        <img src="/images/flag-argentina.svg" alt="" class="w-9 h-auto">
-                        <img src="/images/flag-brasil.svg" alt="" class="w-9 h-auto">
+                        <img src={img.arg} alt="" class="w-9 h-auto">
+                        <img src={img.br} alt="" class="w-9 h-auto">
                     </div>
                 </div>
                 <div class=" text-center border-l-2 border-r-2 px-12 w-full max-w-2xs pt-8">
@@ -24,10 +34,10 @@ import Section from "./Section.astro";
                     </h4>
                     <div class="flex items-center justify-center gap-3">
                         <a href="#" target="_blank">
-                            <img src="/images/icon-instagram.svg" alt="" class="w-8 h-auto">
+                            <img src={img.inst} alt="" class="w-8 h-auto">
                         </a>
                         <a href="#" target="_blank">
-                            <img src="/images/icon-linkedin.svg" alt="" class="w-8 h-auto">
+                            <img src={img.link} alt="" class="w-8 h-auto">
                         </a>
                     </div>
                     
@@ -39,19 +49,19 @@ import Section from "./Section.astro";
                         </h4>
                         <div class="font-display font-light w-full">
                             <a href="#" class="flex items-center gap-2 mb-2">
-                                <img src="/images/icon-whatsapp.svg" alt="" class="w-8 h-auto">
+                                <img src={img.what} alt="" class="w-8 h-auto">
                                 <span>
                                     +54 11 66950476
                                 </span>
                             </a>
                             <a href="#" class="flex items-center gap-2 mb-2">
-                                <img src="/images/icon-envelope.svg" alt="" class="w-8 h-auto">
+                                <img src={img.enve} alt="" class="w-8 h-auto">
                                 <span>
                                      contactus@evolutif.ar
                                 </span>
                             </a>
                             <div class="flex items-center gap-2 min-w-60">
-                                <img src="/images/icon-point.svg" alt="" class="w-8 h-auto">
+                                <img src={img.point} alt="" class="w-8 h-auto">
                                 <span>
                                     Río de Janeiro. Brazil <br>
                                     Buenos Aires. Argentina
