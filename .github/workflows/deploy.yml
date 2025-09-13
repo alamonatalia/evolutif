@@ -2,7 +2,7 @@ name: Deploy Astro to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]   # se ejecuta cada vez que subas a main
+    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -28,9 +28,9 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist   # aquí Astro genera el sitio
+          path: ./dist
 
   deploy:
     environment:
@@ -41,4 +41,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
+
