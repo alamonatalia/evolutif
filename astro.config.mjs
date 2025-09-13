@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://alamonatalia/evolutif',
+  site: 'https://alamonatalia.github.io/evolutif/',
   base: '/evolutif/',
 
   vite: {
