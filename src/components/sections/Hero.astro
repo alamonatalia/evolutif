@@ -1,0 +1,37 @@
+---
+import Container from "../elements/Container.astro"
+import Section from "../elements/Section.astro"
+---
+
+<Section class="min-h-screen bg-center bg-cover bg-[url('/images/bg-hero.png')]">
+    <Container class="relative">
+        <div class="pt-40">
+            <h1 class="text-4xl font-light font-body tracking-widest mt-6 mb-18">
+                Welcome to EvolutiF !
+            </h1>
+            <h2 class="text-2xl font-extralight font-display text-brand-primary max-w-[500px] mb-10">
+                Where strategy meets innovation empowering bold ideas to become global businesses.
+            </h2>
+            <p class="text-xl font-light font-display my-8 max-w-80 mb-12">
+                Our services are centered on strategic planing and financial intelligence.
+            </p>
+            <button
+                class="mt-10 uppercase text-xl bg-brand-primary text-white px-8 py-4 rounded-full cursor-pointer tracking-widest">
+                Our Services
+            </button>
+        </div>
+
+        <img src="/images/bg-rocket-planet.png" alt="" class="absolute top-1/6 right-0 w-full h-auto" >
+
+    </Container>
+</Section>
+
+<Section class="mt-96 mb-72">
+    <Container>
+        <div class="flex flex-row-reverse">
+            <h3 class="text-2xl leading-relaxed max-w-[500px] text-brand-primary">
+                Empoweting you with the tools and insights to successfully navigate the complexities of today's world.
+            </h3>
+        </div>
+    </Container>
+</Section>

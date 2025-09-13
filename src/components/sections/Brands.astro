@@ -1,0 +1,104 @@
+---
+import Container from "../elements/Container.astro";
+import Section from "../elements/Section.astro";
+
+---
+
+<Section>
+    <Container>
+
+        <div class="bg-red-200 relative ml-auto z-0">
+            <div class="absolute -top-32 mt-[1px] left-0 w-full">
+                <img 
+                    src="/images/planet.png" 
+                    alt=""
+                    class=" h-32 w-auto ml-auto mr-auto">
+            </div>
+        </div>
+
+        <div class="relative border border-solid border-brand-primary rounded-3xl mt-40 z-10">
+            <div 
+                id="carousel" 
+                class="relative w-full max-w-sm mx-auto rounded-lg h-36">
+  
+                <!-- Slides -->
+                <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="/images/brand-1.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                </div>
+                <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="/images/brand-2.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                </div>
+                <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="/images/brand-3.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                </div>
+                <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="/images/brand-4.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                </div>
+                <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="/images/brand-5.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                </div>
+                <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="/images/brand-6.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                </div>
+                <div class="absolute inset-0 transition-opacity duration-700 opacity-0">
+                    <img src="/images/brand-7.png" class="w-4/5 ml-[10%] h-auto  object-cover mt-6" />
+                </div>
+                
+                <!-- Controles -->
+                <button id="prev" class="absolute -left-4 top-1/2 -translate-y-1/2">
+                    <img src="/images/icon-arrow.svg" alt="" class="w-7 h-7">
+                </button>
+                <button id="next" class="absolute -right-4 top-1/2 -translate-y-1/2">
+                    <img src="/images/icon-arrow.svg" alt="" class="w-7 h-7 rotate-180">
+                </button>
+            </div>
+
+        </div>
+
+        <h3 class="text-center text-2xl font-light font-display tracking-[6px] mt-4 text-brand-primary">
+            Our Universe 
+        </h3>
+
+    
+<script>
+  const slides = document.querySelectorAll('#carousel > div');
+  const total = slides.length;
+  let current = 0;
+
+  const showSlide = (index: number) => {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('opacity-100', i === index);
+      slide.classList.toggle('opacity-0', i !== index);
+    });
+  };
+
+  const prevBtn = document.getElementById('prev');
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + total) % total;
+      showSlide(current);
+    });
+  }
+
+  const nextBtn = document.getElementById('next');
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % total;
+      showSlide(current);
+    });
+  }
+
+  // Autoplay cada 4 segundos
+  setInterval(() => {
+    current = (current + 1) % total;
+    showSlide(current);
+  }, 6000);
+
+  // Inicial
+  showSlide(current);
+</script>
+
+
+    </Container>
+</Section>
+

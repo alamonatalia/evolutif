@@ -1,0 +1,49 @@
+---
+import "../styles/global.css";
+import Favicon from "../components/head/Favicon.astro";
+import Metadata from "../components/head/Metadata.astro";
+import Header from "../components/elements/Header.astro";
+import Main from "../components/elements/Main.astro";	
+import Footer from "../components/elements/Footer.astro";
+
+
+---
+
+<!doctype html>
+<html lang="en" class=" scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<Metadata
+			site="My Website"
+			title="Home"
+			description="Welcome to my Astro site!"
+			author="Your Name"
+			canonical="https://www.yoursite.com/"
+			url="https://www.yoursite.com/"
+			image="/og-image.png"
+		/>
+		<Favicon 
+			favicon="/favicon.svg" 
+			includeManifest={false} 
+			themeColor="#ffffff" 
+		/>
+
+	</head>
+
+
+	<body
+		class="text-body font-normal bg-[#191919] text-white">
+
+		<Header/>
+
+		<Main>
+			<slot/>
+		</Main>
+
+		<Footer/>
+
+	</body>
+
+
+</html>

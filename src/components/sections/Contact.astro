@@ -1,0 +1,35 @@
+---
+import Container from "../elements/Container.astro";
+import Section from "../elements/Section.astro";
+
+---
+
+<Section class="bg-center bg-cover bg-[url('/images/bg-contact.png')] pt-44">
+    <Container>
+        
+
+        <h4 class="text-brand-primary uppercase font-display tracking-[6px] text-2xl font-semibold mb-4">
+            Contact us
+        </h4>
+
+        <div>
+            <div>
+                <label for="" class="hidden">
+                    Emails
+                </label>
+                <input type="email" placeholder="Your email" class="w-full font-body bg-white text-black placeholder:text-black p-4 mt-6 focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all font-light text-sm leading-relaxed"/>
+            </div>
+            <div>
+                <label for="" class="hidden">
+                    Emails
+                </label>
+                <textarea rows="4" placeholder="Your message" class="w-full font-body bg-white text-black placeholder:text-black p-4 mt-6 focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all font-light text-sm leading-relaxed resize-none"></textarea>
+            </div>
+            <div>
+                <input type="button" value="Send message" class="bg-brand-primary text-brand-primary-dark font-display text-sm font-semibold tracking-[2px] px-6 py-3 mt-6 hover:bg-brand-primary-dark hover:text-white transition-all transition-all cursor-pointer w-full"/>
+            </div>
+            
+        </div>
+
+    </Container>
+</Section>
