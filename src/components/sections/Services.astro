@@ -24,68 +24,67 @@ const icon = {
 };
 ---
 
-<Section id="services" class="mb-10">
+<Section id="services" class="md:mb-10">
     <Container>
         
         <!-- Service 1 -->
-        <div class="mb-32">
+        <div class="md:mb-32">
             <div class="flex items-start gap-2 mb-6">
                 <img 
                     src={icon.rocket} 
                     alt=""
-                    class="h-16 w-auto">
+                    class="h-10 md:h-16 w-auto">
                 <div>
-                    <h4 class="font-display font-semibold text-3xl mb-2">
+                    <h4 class="font-display font-semibold text-xl md:text-3xl mb-2">
                         Services for Startups & Founders
                     </h4>
                     <div class="border-t-1 border-white border-solid relative">
                         <span class="w-36 bg-brand-primary h-1.5 block rounded-br-3xl absolute -top-[1px] left-0"></span>
-                    </div>   
-                    
+                    </div> 
                 </div>
             </div>
-            <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.rocketItem1} 
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Fundraising & Equity Management
                     </span>
                     / Cap table strategy, valuation guidance, and investor-ready structures.
                 </p>
             </div>
-            <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.rocketItem2} 
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Financial Intelligence
                     </span>
                     P&L design, FP&A, and scenario modeling to scale with confidence.
                 </p>
             </div>
-            <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.rocketItem3}
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Business Model Acceleration
                     </span>
                     From idea validation to scalable growth strategies.
                 </p>
             </div>
-            <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.rocketItem4}
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Strategic Advisory
                     </span>
@@ -96,18 +95,18 @@ const icon = {
     </Container>
 </Section>
 
-<Section class="mb-32 relative">
-    <img src={icon.bgInvestors} alt="" class="absolute -top-1/3 left-0 z-0 h-[800px] w-auto">
+<Section class="md:mb-32 relative">
+    <img src={icon.bgInvestors} alt="" class="hidden md:block absolute -top-1/3 left-0 z-0 h-[800px] w-auto">
     <Container class="z-10 relative">
         <!-- Service 2 -->
-        <div class="ml-auto mb-32 w-full max-w-[770px] z-10">
+        <div class="ml-auto md:mb-32 w-full max-w-[770px] z-10">
             <div class="flex items-start gap-2 mb-6">
                 <img 
                     src={icon.investors}
                     alt=""
                     class="h-16 w-auto">
                 <div>
-                    <h4 class="font-display font-semibold text-3xl mb-2">
+                    <h4 class="font-display font-semibold text-xl md:text-3xl mb-2">
                         Services for Investors
                     </h4>
                     <div class="border-t-1 border-white border-solid relative">
@@ -116,36 +115,36 @@ const icon = {
                     
                 </div>
             </div>
-            <div class="flex items-center gap-4 max-w-[680px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.investorsItem1}
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Startup Due Diligence
                     </span>
                     Financial, strategic, and operational assessments for smarter investments.
                 </p>
             </div>
-            <div class="flex items-center gap-4 max-w-[680px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.investorsItem2}
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Portfolio Support Due Diligence
                     </span>
                     Tools and insights to strengthen growth and minimize risk across aventures.Financial, strategic, and operational assessments for smarter investments.
                 </p>
             </div>
-            <div class="flex items-center gap-4 max-w-[680px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.investorsItem3}
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Market Intelligence
                     </span>
@@ -157,7 +156,7 @@ const icon = {
     </Container>
 </Section>
 
-<Section class="mb-32">
+<Section class="md:mb-32">
     <Container>
 
         <!-- Service 3 -->
@@ -168,7 +167,7 @@ const icon = {
                     alt=""
                     class="h-16 w-auto">
                 <div>
-                    <h4 class="font-display font-semibold text-3xl mb-2">
+                    <h4 class="font-display font-semibold text-xl md:text-3xl mb-2">
                         Creative & Communication Services
                     </h4>
                     <div class="border-t-1 border-white border-solid relative">
@@ -177,36 +176,36 @@ const icon = {
                     
                 </div>
             </div>
-            <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.lightItem1}
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Branding & Identity
                     </span>
                     Design that reflects vision, ambition, and scalability.
                 </p>
             </div>
-            <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.lightItem2}
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Media & Digital Assets
                     </span>
                     Motion graphics, video intros/outros, and ad design.
                 </p>
             </div>
-            <div class="flex items-center gap-4 max-w-[580px] ml-16 pl-2 mb-4 font-display">
+            <div class="flex items-center gap-4 max-w-[580px] ml-10 md:ml-16 pl-2 mb-2 md:mb-4 font-display">
                 <img 
                     src={icon.lightItem3}
                     alt=""
                     class="h-14 w-auto">
-                <p class="text-xl">
+                <p class="text-base leading-snug md:leading-normal md:text-xl">
                     <span class="text-brand-primary">
                         Strategic Communication
                     </span>
