@@ -9,26 +9,26 @@ const img = {
 
 ---
 
-<Section id="home" class="min-h-screen bg-top bg-contain bg-no-repeat md:bg-center md:bg-cover bg-[url('/evolutif/images/bg-hero-movil.png')] md:bg-[url('/evolutif/images/bg-hero.png')] relative z-0">
+<Section id="home" class="min-h-screen bg-top bg-contain bg-no-repeat pt-28 md:bg-center md:bg-cover bg-[url('images/bg-hero-movil.png')] md:bg-[url('images/bg-hero.png')] md:pt-0 relative z-0">
     <Container class="relative">
-        <div class="pt-20 z-10 relative text-center md:text-left md:pt-40">
-            <h1 class="text-2xl text-center font-light font-body tracking-widest mt-6 mb-18 md:text-left md:text-4xl ">
+        <div class="pt-16 z-10 relative text-center md:text-left md:pt-40">
+            <h1 class="text-2xl text-center font-light font-body tracking-widest mt-14 mb-18 md:text-left md:text-4xl ">
                 Welcome to EvolutiF !
             </h1>
-            <h2 class="text-base text-center font-extralight font-display text-brand-primary max-w-[380px] mx-auto md:mx-0 md:max-w-[500px] mb-14 md:mb-10 md:text-left md:text-2xl ">
+            <h2 class="text-lg text-center font-extralight font-display text-brand-primary max-w-[380px] mx-auto md:mx-0 md:max-w-[500px] mb-14 md:mb-10 md:text-left md:text-2xl ">
                 Where strategy meets innovation empowering bold ideas to become global businesses.
             </h2>
-            <p class="text-base text-center font-light font-display my-8 max-w-64 mx-auto md:mx-0 md:max-w-80 mb-12 md:text-xl md:text-left">
+            <p class="text-lg text-center font-light font-display my-8 max-w-72 mx-auto md:mx-0 md:max-w-80 mb-12 md:text-xl md:text-left">
                 Our services are centered on strategic planing and financial intelligence.
             </p>
             <a 
                 href="#services"
-                class="mt-10 inline-block uppercase text-base md:text-xl bg-brand-primary text-white px-6 md:px-8 py-2.5 md:py-4 rounded-full cursor-pointer tracking-widest transition-all duration-300 ease-in-out hover:scale-110 hover:ring-4 hover:ring-brand-primary/30 hover:shadow-lg">
+                class="mt-12 inline-block uppercase text-base md:text-xl bg-brand-primary text-white px-6 md:px-8 py-2.5 md:py-4 rounded-full cursor-pointer tracking-widest transition-all duration-300 ease-in-out hover:scale-110 hover:ring-4 hover:ring-brand-primary/30 hover:shadow-lg">
                 Our Services
             </a>
         </div>
 
-        <img src={img.bg} alt="" class="md:absolute md:top-1/6 md:right-0 md:mt-0 w-full h-auto z-0 hidden md:block" >
+        <img src={img.bg} alt="" class="md:absolute md:top-1/6 md:-left-30 md:mt-0 w-full h-auto z-0 hidden md:block" >
 
     </Container>
 </Section>
@@ -36,7 +36,7 @@ const img = {
 <Section class="md:mt-96 mb-72 ">
     <Container class="relative">
         <div class="flex flex-row-reverse">
-            <h3 class=" text-base text-center md:text-2xl leading-relaxed max-w-[300px] mx-auto md:max-w-[500px] text-brand-primary mt-40 md:mt-0 md:mx-0 md:text-left">
+            <h3 class=" text-base text-center md:text-2xl leading-relaxed max-w-[300px] mx-auto md:max-w-[480px] text-brand-primary mt-40 md:mt-0 md:mx-0 md:text-left">
                 Empoweting you with the tools and insights to successfully navigate the complexities of today's world.
             </h3>
         </div>
