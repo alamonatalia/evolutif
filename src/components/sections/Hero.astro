@@ -4,6 +4,7 @@ import Section from "../elements/Section.astro"
 
 const img = {
   bg: `${Astro.site}/images/bg-rocket-planet.png`,
+  bgMobile: `${Astro.site}/images/bg-rocket-planet-mobile.png`,
 };
 
 
@@ -40,6 +41,6 @@ const img = {
                 Empowering you with the tools and insights to successfully navigate the complexities of today's world.
             </h3>
         </div>
-        <img src={img.bg} alt="" class="md:hidden absolute top-0 right-0 w-full scale-150 h-auto z-0 -rotate-12" >
+        <img src={img.bgMobile} alt="" class="md:hidden absolute top-0 right-8 w-full scale-150 h-auto z-0 -rotate-12" >
     </Container>
 </Section>
