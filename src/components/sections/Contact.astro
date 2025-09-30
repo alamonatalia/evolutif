@@ -11,27 +11,72 @@ import Section from "../elements/Section.astro";
             Contact us
         </h4>
 
-        <div>
+        <form method="POST" action="contact.php" class="">
             <div>
-                <label for="" class="hidden">
+                <label for="email" class="hidden">
                     Emails
                 </label>
                 <input 
                     type="email" 
+                    name="email"
                     placeholder="Your email" 
+                    required
                     class="w-full font-body bg-white text-black placeholder:text-black p-4 mt-6 focus:outline-none focus:ring-4 focus:ring-brand-primary transition-all font-light text-sm leading-relaxed"/>
             </div>
             <div>
-                <label for="" class="hidden">
-                    Emails
+                <label for="message" class="hidden">
+                    Message
                 </label>
-                <textarea rows="4" placeholder="Your message" class="w-full font-body bg-white text-black placeholder:text-black p-4 mt-6 transition-all focus:outline-none focus:ring-4 focus:ring-brand-primary font-light text-sm leading-relaxed resize-none"></textarea>
+                <textarea 
+                    name="message"
+                    rows="4" 
+                    placeholder="Your message" 
+                    class="w-full font-body bg-white text-black placeholder:text-black p-4 mt-6 transition-all focus:outline-none focus:ring-4 focus:ring-brand-primary font-light text-sm leading-relaxed resize-none"></textarea>
             </div>
             <div>
-                <input type="button" value="Send message" class="bg-brand-primary text-brand-primary-dark font-display text-sm font-semibold tracking-[2px] px-6 py-3 mt-6 hover:tracking-[4px] hover:text-white transition-all cursor-pointer w-full"/>
+                <input 
+                    type="submit" 
+                    value="Send message" 
+                    class="bg-brand-primary text-brand-primary-dark font-display text-sm font-semibold tracking-[2px] px-6 py-3 mt-6 hover:tracking-[4px] hover:text-white transition-all cursor-pointer w-full"/>
             </div>
+
+            <!-- Mensaje de respuesta -->
+            <?php if(isset($_GET['status'])): ?>
+                <?php if($_GET['status'] == 'success'): ?>
+                <p class="text-center mt-4 text-sm text-green-600">¡Mensaje enviado correctamente!</p>
+                <?php else: ?>
+                <p class="text-center mt-4 text-sm text-red-600">Error al enviar el mensaje. Intenta de nuevo.</p>
+                <?php endif; ?>
+            <?php endif; ?>
             
-        </div>
+        </form>
 
     </Container>
 </Section>
+
+<script type="module">
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  status.textContent = "Enviando...";
+  status.className = "text-center mt-4 text-sm text-blue-600";
+
+  const formData = new FormData(form);
+
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    body: formData
+  });
+
+  if (response.ok) {
+    status.textContent = "¡Mensaje enviado correctamente!";
+    status.className = "text-center mt-4 text-sm text-green-600";
+    form.reset();
+  } else {
+    status.textContent = "Error al enviar el mensaje. Intenta de nuevo.";
+    status.className = "text-center mt-4 text-sm text-red-600";
+  }
+});
+</script>
